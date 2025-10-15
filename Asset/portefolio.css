@@ -1,20 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
 
+  /* Fond manga avec parallaxe */
+  background-image: url('touboune.jpeg');  /* nom exact du fichier */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+/* ===========================
+   HEADER
+=========================== */
+header {
+  background: transparent;
+  color: rgb(12, 11, 11);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
 
-.compétences {
-  display: flex;           /* active Flexbox */
-  justify-content: center; /* centre les images horizontalement */
-  gap: 20px;               /* espace entre les images */
-  flex-wrap: wrap;         /* passe à la ligne si écran trop petit */
+header h1 {
+  font-size: 3em;
+  margin: 0 0 10px 0;
+}
+
+nav {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Zone avec le nom et l'image centrée */
+.header-content {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  gap: 30px;               /* espace entre nom et image */
+  flex-wrap: wrap;
+}
+
+header p {
+  color: rgb(10, 10, 10);
+  font-size: 2em;
+  margin: 0;
+}
+
+header img {
+  width: 150px;  /* taille de Zoro */
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#a-propos p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===========================
+   SOFT SKILLS
+=========================== */
+#softskill p {
+  color: blueviolet;
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.social-icon {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* ===========================
+   COMPÉTENCES
+=========================== */
+#competences h4 {
+  color: blue;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.competence-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
   margin-top: 20px;
 }
 
-#compétences img {
-  width: 10%;             /* largeur des images */
-  height: auto;            /* garde les proportions */
-  transition: transform 0.3s; /* effet au survol */
+.competence-logos img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s;
 }
 
-.compétences img:hover {
-  transform: scale(1.1);   /* effet zoom au survol */
+.competence-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   TECHNOLOGIES
+=========================== */
+#technologie {
+  font-size: 1.3em;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+#contact p {
+  color: limegreen;
+  font-size: 1.3em;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  header h1 { font-size: 2.2em; }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header img { width: 120px; }
+  .social-icon { width: 50px; }
+  .competence-logos img { width: 80px; }
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 1.8em; }
+  header p { font-size: 1.5em; }
+  .competence-logos img { width: 70px; }
 }
