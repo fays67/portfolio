@@ -1,0 +1,17 @@
+.compétences {
+  display: flex;           /* active Flexbox */
+  justify-content: center; /* centre les images horizontalement */
+  gap: 20px;               /* espace entre les images */
+  flex-wrap: wrap;         /* passe à la ligne si écran trop petit */
+  margin-top: 20px;
+}
+
+.compétences img {
+  width: 80px;             /* largeur des images */
+  height: auto;            /* garde les proportions */
+  transition: transform 0.3s; /* effet au survol */
+}
+
+.compétences img:hover {
+  transform: scale(1.1);   /* effet zoom au survol */
+}
