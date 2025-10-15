@@ -1,3 +1,6 @@
+
+
+
 .compétences {
   display: flex;           /* active Flexbox */
   justify-content: center; /* centre les images horizontalement */
@@ -6,8 +9,8 @@
   margin-top: 20px;
 }
 
-.compétences img {
-  width: 80px;             /* largeur des images */
+#compétences img {
+  width: 10%;             /* largeur des images */
   height: auto;            /* garde les proportions */
   transition: transform 0.3s; /* effet au survol */
 }
